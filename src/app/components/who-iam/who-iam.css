@@ -1,0 +1,17 @@
+.repo-container {
+  display: flex;             /* Alinea las cards en fila */
+  overflow-x: auto;          /* Permite scroll horizontal */
+  scroll-snap-type: x mandatory; /* Activa el snap en eje X obligatorio */
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;   /* Para que el scroll sea fluido */
+  -webkit-overflow-scrolling: touch; /* Mejora scroll en móviles */
+}
+
+.repo-container{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+/* Ocultar la barra de scroll si lo prefieres */

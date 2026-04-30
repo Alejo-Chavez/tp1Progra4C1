@@ -1,0 +1,52 @@
+.repo-card{
+    background-color: #151D33;
+}
+.repo-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #57606a; /* Color gris suave de GitHub */
+}
+
+.stat-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer; /* Para que parezca clickeable */
+  transition: all 0.2s ease;
+}
+
+/* El SVG hereda el color del texto por defecto si usamos 'currentColor' 
+   o podemos forzarlo con fill */
+.octicon {
+  fill: #57606a; 
+  transition: fill 0.2s ease;
+}
+
+/* EFECTO HOVER: Cuando pasas el mouse por el grupo (icono + numero) */
+.stat-group:hover {
+  color: #0969da; /* El azul clásico de GitHub */
+}
+
+.stat-group:hover .octicon {
+  fill: #0969da; /* Cambia el color del SVG al mismo tiempo */
+}
+
+ /*Estilos de los links*/
+ .repo-card h3 a {
+  text-decoration: none; 
+  color: #0969da;       
+}
+
+/*Para que mantengan los colores*/
+.repo-card h3 a:visited, 
+.repo-card h3 a:active {
+  color: #0969da; /* Mantén el mismo color que el estado normal */
+}
+
+/* Opcional: un color distinto solo cuando pasas el mouse */
+.repo-card h3 a:hover {
+  text-decoration: underline;
+  color: #0969da;
+  background-color: #08881286 ;
+}

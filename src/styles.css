@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/*Variables globales*/
+:root{
+    /*Paleta de colores principales*/
+    --baltic-blue: #2f6690;
+    --verdegriss: #369E8B;
+    --cerulean: #3A7CA5;
+    --ash-gray: #B8BDB2;
+    --yale-blue: #16425B;
+    --sky-blue: #81C3D7;
+
+   
+}
+ /*Global app overides (fondo y texto)*/
+html,body{
+    background-color: white;
+    color: var(--yale-blue);
+    margin: 0;
+    padding: 0;
+}

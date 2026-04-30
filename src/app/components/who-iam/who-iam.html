@@ -1,0 +1,29 @@
+@if (loading()) {
+  <p>Cargando datos de GitHub...</p>
+}
+
+@if (error()) {
+  <p style="color:red">{{ error() }}</p>
+}
+
+@if (user()) {
+  <div class="my-information">
+    <h2>{{ user()?.name }}</h2>
+    <img [src]="user()?.avatar_url" width="150" alt="Avatar">
+    <p><strong>Usuario:</strong> {{ user()?.login }}</p>
+    <p><strong>Bio:</strong> {{ user()?.bio }}</p>
+    <p><strong>Seguidores:</strong> {{ user()?.followers }}</p>
+    <p><strong>Repos:</strong> {{ user()?.public_repos }}</p>
+  </div>
+}
+
+<div class="repo-container">
+  <!-- El ciclo @for va aquí, sobre el componente hijo -->
+  @for (item of repos(); track item.id) {
+    <app-repo-card [repos]="item"></app-repo-card>
+  } @empty {
+    @if (!loading()) {
+      <p>No se encontraron repositorios públicos.</p>
+    }
+  }
+</div>
