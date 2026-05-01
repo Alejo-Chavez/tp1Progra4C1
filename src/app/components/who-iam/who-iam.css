@@ -1,17 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden !important;
+    margin: 0;
+}
+
+
+
+/* Ocultar scrollbar en toda la pagina pero mantener scroll */
+* {
+    scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
 .repo-container {
-  display: flex;             /* Alinea las cards en fila */
-  overflow-x: auto;          /* Permite scroll horizontal */
-  scroll-snap-type: x mandatory; /* Activa el snap en eje X obligatorio */
-  gap: 20px;
-  padding: 20px;
-  scroll-behavior: smooth;   /* Para que el scroll sea fluido */
-  -webkit-overflow-scrolling: touch; /* Mejora scroll en móviles */
-}
-
-.repo-container{
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: none; /* Firefox */
 }
 
+.repo-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
 /* Ocultar la barra de scroll si lo prefieres */
+
+
+.layout {
+    display: flex;
+    height: 100vh; /* Ocupa el total de la pantalla[cite: 1] */
+}
+
+.sidebar {
+    position: fixed;
+    top: 4rem;
+    width: 16rem;
+    height: calc(100vh - 4rem);
+    overflow-y: auto; /* Permite scroll solo en la sidebar si hay mucha info */
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border-radius: 2.2rem;
+    overflow: hidden;
+}
+.profile img{
+    border: 1.5px solid rgba(255, 255, 255, 0.247);
+    border-radius: 50%;
+    clip-path: circle(100%);
+    width: 130px;
+    object-fit: cover;
+}
+.content {
+    padding-top: 4rem;
+    margin-left: 16rem;
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+    overflow-x: hidden; /* Esto ya lo tienes, pero asegúrate de que se aplique[cite: 1] */
+    scrollbar-width: none; /* Oculta en Firefox[cite: 1] */
+}
+
+/* Ocultar scroll horizontal en Chrome/Edge para los repos */
+.repo-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto; /* Para que funcione el scroll-snap */
+    scrollbar-width: none; 
+}
+
+.repo-container::-webkit-scrollbar {
+    display: none; /*[cite: 1] */
+}
+
+.follow-btn {
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--ink-black-component);
+    border: 1px solid #30363d;
+    color: var(--azure-blue);
+    border-radius: 0.5rem;
+}
