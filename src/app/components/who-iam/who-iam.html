@@ -3,9 +3,10 @@
 
     @if(user()){
     <div class="profile">
-      <img [src]="user()?.avatar_url" width="150" alt="Avatar">
+      <div class="img-container">
+      <img [src]="user()?.avatar_url" width="150" alt="Avatar"></div>
       <div class="identity">
-        <h2>{{ user()?.login }}</h2>
+        <h2>@{{ user()?.login }}</h2>
         <p class="role">Full Stack Engineer</p>
       </div>
     </div>}
@@ -13,18 +14,20 @@
 
     <div class="stats">
       <div class="stat">
-        <span><strong>Repos:</strong> {{ user()?.public_repos }}</span>
+        <span> {{ user()?.public_repos }} </span>
+        <p>Repos</p>
       </div>
 
       <div class="stat">
-        <span><strong>Seguidores:</strong> {{ user()?.followers }}</span>
+        <span> {{ user()?.followers }}</span>
+         <p>Seguidores</p>
       </div>
     </div>
 
 
     <div class="about">
-      <h4>Sobre mí</h4>
-      <p>texto...</p>
+      <h4>SOBRE MÍ</h4>
+      <p>Apasionado por crear experiencias digitales eficientes y escalables. Especializado en Rust y TypeScript</p>
     </div>
 
 

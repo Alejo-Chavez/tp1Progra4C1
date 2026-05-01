@@ -7,19 +7,10 @@ body{
 }
 
 
-
-/* Ocultar scrollbar en toda la pagina pero mantener scroll */
-* {
-    scrollbar-width: none; /* Firefox */
-}
-*::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
-}
-
 .repo-container {
     display: flex;
-    gap: 20px;
-    padding: 20px;
+    gap: 1.25rem;
+    padding: 1.25rem;
     scrollbar-width: none; /* Firefox */
 }
 
@@ -35,30 +26,126 @@ body{
 }
 
 .sidebar {
+    
+    padding-top: 2rem;
+    border: 0.063rem solid var(--purssian-blue);
     position: fixed;
+    align-items: center;
+    justify-content: center;
     top: 4rem;
-    width: 16rem;
+    padding: 0rem 1.5rem;
+    width: 14.625rem;
     height: calc(100vh - 4rem);
     overflow-y: auto; /* Permite scroll solo en la sidebar si hay mucha info */
 }
 .profile{
+    padding: 2rem 0rem 3rem 0rem;   
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
     align-items: center;
     border-radius: 2.2rem;
     overflow: hidden;
+    width: 100%;
+    height: 11.2rem;
+    justify-content: space-between;
+}
+.stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 1rem ;
+}
+.stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.188rem;
+    margin-top: 0.625rem;
+    background-color: var(--ink-black-component);
+    height: 3.75rem;
+    width: 6.25rem;
+    /* Sombra para darle el efecto brillante */
+    box-shadow: 0 0 0.125rem rgba(255, 255, 255, 0.208);
+    padding: 0.5rem;
+
+    border-width: 0.036rem;
+    border-color: #30363d;
+    border-style: solid;
+    border-radius:0.25rem;
+   
+}
+
+.stat p{
+    margin: 0;
+    font-size: 0.625rem;
+    letter-spacing: 0.075rem;
+    color: #64748B
+}
+.stat span{
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.profile .identity h2{
+    font-size: 1rem;
+}
+.img-container{
+    filter: brightness(0.9);
+    width: 5.813rem;
+    height: 5.813rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .profile img{
-    border: 1.5px solid rgba(255, 255, 255, 0.247);
-    border-radius: 50%;
-    clip-path: circle(100%);
-    width: 130px;
-    object-fit: cover;
+    border-radius: 10%;
+    box-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.340);
+    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    height: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    object-fit: cover; /* Mantiene la imagen recortada y centrada */
+}
+.identity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.063rem;
+}
+.identity p, 
+.identity h2{
+    margin: 0;
+}
+
+.identity p{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #64748B;
+}
+.about{
+    display: block;
+    letter-spacing: 0.034rem;
+    color: rgb(148, 163, 184);
+    padding-bottom: 2.5rem;
+}
+.about h4{
+    font-size: 0.80rem;
+    font-weight: 700;
+    height: 1.1rem;
+    width: 11.25rem;
+}
+
+.about p{
+    font-weight: 400;
+    font-size: 0.75rem;
+    letter-spacing: 0.060rem;
 }
 .content {
     padding-top: 4rem;
-    margin-left: 16rem;
+    margin-left: 14.625rem;
     height: calc(100vh - 4rem);
     overflow-y: auto;
     overflow-x: hidden; /* Esto ya lo tienes, pero asegúrate de que se aplique[cite: 1] */
@@ -68,8 +155,8 @@ body{
 /* Ocultar scroll horizontal en Chrome/Edge para los repos */
 .repo-container {
     display: flex;
-    gap: 20px;
-    padding: 20px;
+    gap: 1.25rem;
+    padding: 1.25rem;
     overflow-x: auto; /* Para que funcione el scroll-snap */
     scrollbar-width: none; 
 }
@@ -82,7 +169,11 @@ body{
     width: 100%;
     padding: 0.5rem;
     background: var(--ink-black-component);
-    border: 1px solid #30363d;
+    border: 0.063rem solid #30363d;
     color: var(--azure-blue);
     border-radius: 0.5rem;
+}
+
+.follow-btn:hover {
+    filter: brightness(1.2);  /* Hace el botón más brillante */
 }
