@@ -26,7 +26,6 @@ body{
 }
 
 .sidebar {
-    
     padding-top: 2rem;
     border: 0.063rem solid var(--purssian-blue);
     position: fixed;
@@ -66,8 +65,8 @@ body{
     gap: 0.188rem;
     margin-top: 0.625rem;
     background-color: var(--ink-black-component);
-    height: 3.75rem;
-    width: 6.25rem;
+    height: 3.125rem;
+    width: 5rem;
     /* Sombra para darle el efecto brillante */
     box-shadow: 0 0 0.125rem rgba(255, 255, 255, 0.208);
     padding: 0.5rem;
@@ -132,7 +131,8 @@ body{
     padding-bottom: 2.5rem;
 }
 .about h4{
-    font-size: 0.80rem;
+    padding-top: 0.5rem;
+    font-size: 0.60rem;
     font-weight: 700;
     height: 1.1rem;
     width: 11.25rem;
@@ -140,25 +140,96 @@ body{
 
 .about p{
     font-weight: 400;
-    font-size: 0.75rem;
-    letter-spacing: 0.060rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.050rem;
 }
 .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 4rem;
-    margin-left: 14.625rem;
+    padding-left: 1rem;
+    margin-inline: clamp(17px, 3vw, 40px); /*No entiendo muy bien como funciona (investigar)*/
+    margin-left: 15.9rem;
     height: calc(100vh - 4rem);
+    width: 100%;
     overflow-y: auto;
-    overflow-x: hidden; /* Esto ya lo tienes, pero asegúrate de que se aplique[cite: 1] */
-    scrollbar-width: none; /* Oculta en Firefox[cite: 1] */
+    scrollbar-width: none;
+    overflow-x: hidden; /*Esconde barra eje X */
+} 
+
+.my-game{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: var(--ink-black-component);
+    padding: 1.5rem;
+    border-radius: 2%;
+    gap:14px;
+    margin-top: 2.2rem;
 }
 
-/* Ocultar scroll horizontal en Chrome/Edge para los repos */
-.repo-container {
+.my-game h1, .my-game h5{
+    margin: 0;
+    padding: 0.75rem;
+    margin-left: 1rem;
+}
+
+.my-game h5{
+    color:rgba(172, 200, 255, 0.979);
+    border:1px solid rgba(73, 143, 255, 0.3);
+    border-radius: 50px;
+    width: auto;
+    height: 2rem;
+    line-height: 0.4rem;
+    font-size: 13px;
+    font-weight: 500;
+}
+.my-game h1{
+    font-size: 40px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+.game-info{
     display: flex;
-    gap: 1.25rem;
-    padding: 1.25rem;
-    overflow-x: auto; /* Para que funcione el scroll-snap */
-    scrollbar-width: none; 
+    flex-direction: column;
+}
+.game-info h4{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+
+}
+.game-info p{
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.repo-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 1rem;
+    margin-right: 1.35rem;
+}
+ul{
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+}
+li{
+    color: #94A3B8;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 0.1px;
+}
+ul li p {
+    font-size: 0.9rem;
 }
 
 .repo-container::-webkit-scrollbar {

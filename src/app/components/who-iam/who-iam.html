@@ -4,7 +4,8 @@
     @if(user()){
     <div class="profile">
       <div class="img-container">
-      <img [src]="user()?.avatar_url" width="150" alt="Avatar"></div>
+        <img [src]="user()?.avatar_url" width="150" alt="Avatar">
+      </div>
       <div class="identity">
         <h2>@{{ user()?.login }}</h2>
         <p class="role">Full Stack Engineer</p>
@@ -20,7 +21,7 @@
 
       <div class="stat">
         <span> {{ user()?.followers }}</span>
-         <p>Seguidores</p>
+        <p>Seguidores</p>
       </div>
     </div>
 
@@ -37,22 +38,37 @@
   </aside>
 
   <main class="content">
-    @if (loading()) {
-    <p>Cargando datos de GitHub...</p>
-    }
-
-    @if (error()) {
-    <p style="color:red">{{ error() }}</p>
-    }
-
-    @if (user()) {
-    <div class="my-information">
-      <p><strong>Usuario:</strong> {{ user()?.login }}</p>
-      <p><strong>Bio:</strong> {{ user()?.bio }}</p>
+    <div class="my-game">
+      <h5>&bull; Mi juego (en desarollo)</h5>
+      <h1>Proyecto: ¿Qué país?</h1>
+      <div class="game-info">
+        <p>
+          El juego es un "Adivina la bandera". En cada ronda se muestra una bandera con 4 opciones de países. El usuario
+          elige una y recibe feedback inmediato utilizando un mapa SVG: si acierta, el país se ilumina en verde, si
+          falla, su elección se marca en rojo y la correcta en verde
+        </p>
+        <h4>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="11" fill="white" height="11"><path d="m14.515.456.965.965a1.555 1.555 0 0 1 0 2.2L9.745 9.355a1.549 1.549 0 0 1-.672.396l-2.89.826a.67.67 0 0 1-.828-.474.66.66 0 0 1 .004-.35l.825-2.89c.073-.254.209-.486.396-.673L12.315.456c.144-.145.316-.259.505-.337a1.538 1.538 0 0 1 1.19 0c.189.078.361.192.505.337Zm-3.322 3.008-3.67 3.669a.214.214 0 0 0-.057.096L6.97 8.965l1.736-.496a.218.218 0 0 0 .096-.056l3.67-3.67Zm2.065-2.066L12.135 2.52l1.28 1.28 1.122-1.122a.216.216 0 0 0 .065-.157.216.216 0 0 0-.065-.157l-.965-.966a.216.216 0 0 0-.157-.065.226.226 0 0 0-.157.065Z"></path><path d="M0 14.25V2.75A1.75 1.75 0 0 1 1.75 1H7a.75.75 0 0 1 0 1.5H1.75a.25.25 0 0 0-.25.25v11.5a.25.25 0 0 0 .25.25h11.5a.25.25 0 0 0 .25-.25V8.5a.75.75 0 0 1 1.5 0v5.75c0 .464-.184.909-.513 1.237A1.746 1.746 0 0 1 13.25 16H1.75A1.75 1.75 0 0 1 0 14.25Z"></path></svg>
+            Reglas del juego</h4>
+        <ul>
+          <li><p>4 opciones por ronda.</p></li>
+          <li><p>1 solo intento por ronda.</p></li>
+          <li><p>El usuario tendrá 3 vidas</p></li>
+          <li><p>Respuesta correcta, sigue jugando.</p></li>
+          <li><p>Respuesta incorrecta quita una vida.</p></li>
+          <li><p>Si el usuario pierde su útlima vida el juego se acaba.</p></li>
+        </ul>
+      </div>
     </div>
-    }
 
     <div class="repo-container">
+      @if (loading()) {
+      <p>Cargando datos de GitHub...</p>
+      }
+      @if (error()) {
+      <p style="color:red">{{ error() }}</p>
+      }
+
       <!-- El ciclo @for va aquí, sobre el componente hijo -->
       @for (item of repos(); track item.id) {
       <app-repo-card [repos]="item"></app-repo-card>
