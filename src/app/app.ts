@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 //Importo un servicio que angular crea por mi, este caso http client
-import { provideHttpClient } from '@angular/common/http';
+
 import { Header } from './components/header/header';
 
 
@@ -17,6 +17,6 @@ export class App {
 }
 
 export const appConfig = {
-  providers: [provideHttpClient()]
+ 
 };
 

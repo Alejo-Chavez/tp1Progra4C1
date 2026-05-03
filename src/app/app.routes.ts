@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { WhoIAm } from './components/who-iam/who-iam';
 import { Component } from '@angular/core';
+import { WhoIam2 } from './features/who-iam2/who-iam2/who-iam2';
 
 export const routes: Routes = [
-      { path: '', redirectTo: 'who-iam', pathMatch: 'full' },
-      { path: 'who-iam', component: WhoIAm}
+      { path: '', redirectTo: 'who-iam2', pathMatch: 'full' },
+      { path: 'who-iam2', component: WhoIam2},
      
 ];

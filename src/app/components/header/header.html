@@ -1,15 +1,29 @@
-<nav class="nav-bar">
-    <div class="my-name">
-        <span>Alejo Demian Chavez</span>
+<nav class="fixed top-0 left-0 w-full h-16 flex items-center justify-between px-4 sm:px-6 bg-black border-b border-[var(--ale)]/50 z-50">
+
+    <!-- Nombre -->
+    <div>
+        <span class="text-white text-sm sm:text-base font-semibold">
+            Alejo Chavez
+        </span>
     </div>
 
-    <div class="nav-buttons">
-        <button class="login-btn">
-            Iniciar Sesion
+    <!-- Botones -->
+    <div class="flex gap-2 sm:gap-3">
+        
+        <!-- Login -->
+        <button class="px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm 
+                       border border-gray-500 text-white rounded 
+                       hover:bg-gray-800 transition">
+            Iniciar
         </button>
-        <button class="register-btn">
-            Registrarse
+
+        <!-- Register -->
+        <button class="px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm 
+                       bg-blue-600 text-white rounded 
+                       hover:bg-blue-700 transition">
+            Registro
         </button>
+
     </div>
+
 </nav>
-<hr>

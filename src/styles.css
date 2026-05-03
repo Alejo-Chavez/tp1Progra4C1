@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /*Variables globales*/
 :root{
     /*Paleta de colores principales*/
@@ -7,7 +9,9 @@
     --azure-blue: #3489ff;
     --yale-blue: #16425B;
     --sky-blue: #81C3D7;
-    --ale: #161B22;
+    --ale: #30363d;
+    --primary: #acc7ff;
+    
 
    
 }

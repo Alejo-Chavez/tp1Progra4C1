@@ -2,6 +2,7 @@ import { Injectable, signal, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 //ahora importo el servicio http que pedí
 import { GitHubUser } from '../models/git-hub-user';
+import { GitHubRepo } from '../models/git-hub-repo';
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +34,7 @@ export class GithubService {
       }
     });
 
-    this.http.get<any[]>(this.apiReposUrl).subscribe({
+    this.http.get<GitHubRepo[]>(this.apiReposUrl).subscribe({
       next: (data) => {
         this.repos.set(data);
         this.loading.set(false);
