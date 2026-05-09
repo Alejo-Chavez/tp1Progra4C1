@@ -1,1 +1,20 @@
-<p>home works!</p>
+<div class="flex pt-16">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-6 py-4 ">
+
+  @for (game of games; track game.title) {
+    <div class="bg-[var(--ink-black-component)] p-4 rounded-xl shadow hover:scale-105 transition cursor-pointer"
+         [routerLink]="game.route">
+
+      <i class="text-2xl mb-2" [class]="game.icon"></i>
+
+      <h3 class="text-lg font-bold">{{ game.title }}</h3>
+
+      <p class="text-sm text-gray-400">
+        {{ game.description }}
+      </p>
+
+    </div>
+  }
+
+</div>
+</div>

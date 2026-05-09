@@ -7,7 +7,7 @@
     --ink-black-component: #161B22;
     --purssian-blue: #1B2739;
     --azure-blue: #3489ff;
-     --azure-blue-2: #115fce;
+    --azure-blue-2: #115fce;
     --yale-blue: #16425B;
     --sky-blue: #81C3D7;
     --ale: #30363d;
@@ -38,4 +38,27 @@ html {
 html::-webkit-scrollbar {
   /* Ocultar en Chrome, Safari y Opera */
   display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+.animate-fadeIn-2 {
+  animation: fadeIn 0.7s ease-in forwards;
+}
+
+.animate-fadeIn-3{
+  animation: fadeIn 0.8 ease-in forwards;
 }
