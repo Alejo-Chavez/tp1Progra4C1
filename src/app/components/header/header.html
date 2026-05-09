@@ -18,7 +18,12 @@
 
     
     <div class="flex gap-2 sm:gap-3 max-h-14" >
-        @if (!auth.currentUser()) {
+        <button class="px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm 
+                       border border-gray-500 text-white rounded 
+                       hover:bg-gray-800 transition">
+            Quien Soy
+        </button>
+@if (!auth.currentUser()) {
         <!--Login -->
         <button class="h-10 min-w-[110px] flex items-center justify-center text-xs sm:text-sm
                        box-border border border-gray-500 rounded 
