@@ -4,6 +4,5 @@ import { Component } from '@angular/core';
   selector: 'app-ahorcado',
   imports: [],
   templateUrl: './ahorcado.html',
-  styleUrl: './ahorcado.css',
 })
 export class Ahorcado {}
