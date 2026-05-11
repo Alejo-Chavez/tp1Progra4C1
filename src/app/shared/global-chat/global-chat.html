@@ -1,0 +1,66 @@
+<!-- Panel de Chat (Contenedor Principal) -->
+<aside class="fixed top-0 right-0 h-full w-full min-[640px]:w-[300px] md:w-[400px] bg-[#181c23] border-l border-[#414754] z-[60] flex flex-col font-sans transition-opacity duration-300 md:opacity-90 md:hover:opacity-100">
+    
+    <!-- Header del Chat -->
+    <div class="p-[1.5rem] border-b border-[#414754] flex items-center justify-between bg-[#1d2027]">
+        <div class="flex items-center gap-3">
+            <div class="w-2 h-2 rounded-full bg-[#acc7ff] animate-pulse"></div>
+            <h3 class="text-[16px] font-semibold text-[#e0e2ec]">Chat global</h3>
+        </div>
+        <button (click)="close.emit()" 
+        class="text-[#c1c6d6] hover:text-white p-1">
+            <span class="material-symbols-outlined text-[24px]">cerrar</span>
+        </button>
+    </div>
+
+    <!-- Lista de Mensajes -->
+    <div class="flex-1 overflow-y-auto p-[1.5rem] space-y-6">
+        
+        <!-- Mensaje de Sistema -->
+        <div class="space-y-1">
+            <div class="flex items-center gap-2">
+                <span class="text-[12px] font-bold text-[#acc7ff]">Sistema</span>
+                <span class="text-[10px] text-[#8b909f]">14:20</span>
+            </div>
+            <div class="bg-[#32353c] p-3 rounded-[0.5rem] rounded-tl-none border border-[#414754]">
+                <p class="text-[14px] text-[#c1c6d6] italic">Sistema inicializandose como ejemplo.</p>
+            </div>
+        </div>
+
+        <!-- Mensaje de Usuario A -->
+        <div class="space-y-1">
+            <div class="flex items-center gap-2">
+                <span class="text-[12px] font-bold text-[#bfc7d3]">Manolo</span>
+                <span class="text-[10px] text-[#8b909f]">14:22</span>
+            </div>
+            <div class="bg-[#32353c] p-3 rounded-[0.5rem] rounded-tl-none border border-[#414754]">
+                <p class="text-[14px] text-[#e0e2ec]">Probando el chat de ejemplo</p>
+            </div>
+        </div>
+
+        <!-- Mensaje de Usuario B -->
+        <div class="space-y-1">
+            <div class="flex items-center gap-2">
+                <span class="text-[12px] font-bold text-[#ffb68b]">PapitaAsada</span>
+                <span class="text-[10px] text-[#8b909f]">14:25</span>
+            </div>
+            <div class="bg-[#32353c] p-3 rounded-[0.5rem] rounded-tl-none border border-[#414754]">
+                <p class="text-[14px] text-[#e0e2ec]">Segundo mensaje para el chat como "vista previa"</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input de Chat -->
+    <div class="p-[1.5rem] bg-[#1d2027] border-t border-[#414754]">
+        <div class="relative">
+            <input 
+                type="text"
+                class="w-full bg-[#0b0e15] border border-[#414754] rounded-[0.5rem] py-3 px-4 pr-12 text-[14px] text-[#e0e2ec] focus:outline-none focus:border-[#acc7ff] transition-colors placeholder-[#8b909f]" 
+                placeholder="Type a message..." 
+            />
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-[#acc7ff] hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-[24px]">enviar</span>
+            </button>
+        </div>
+    </div>
+</aside>

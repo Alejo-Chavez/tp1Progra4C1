@@ -5,7 +5,6 @@ import { RepoCard } from '../components/repo-card/repoc-card';
   selector: 'app-who-iam2',
   imports: [RepoCard],
   templateUrl: './who-iam2.html',
-  styleUrl: './who-iam2.css',
 })
 export class WhoIam2 {
 
