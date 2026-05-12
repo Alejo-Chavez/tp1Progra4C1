@@ -17,7 +17,7 @@ export class Home {
   {
     title: 'Juego 2',
     description: 'Tendrás la suerte necesaria para adivinar si tu siguiente será mayor o menor?',
-    route: '/mayor-o-menor',
+    route: '/games/mayor-o-menor',
     icon: 'fa-chess'
 },
 {
