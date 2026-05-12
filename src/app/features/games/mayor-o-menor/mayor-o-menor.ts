@@ -113,5 +113,8 @@ export class MayorOMenor {
       this.evaluating.set(false);
     }, 700);
   }
-
+  
+  ngOnDestroy() {
+  this.sound.stopMusic();
+}
 }
