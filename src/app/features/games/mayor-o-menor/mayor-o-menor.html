@@ -1,6 +1,6 @@
 <div class="pt-16">
     <main
-        class="min-h-screen bg-[#10131a] text-[#e0e2ec] font-sans flex flex-col items-center justify-center p-6 relative overflow-hidden">
+        class="min-h-screen bg-[url('/assets/backgrounds/screen2.png')] opacity-95  font-sans flex flex-col items-center justify-center p-6 relative overflow-hidden">
     @if (!playing()) {
         <div class="fixed inset-0 z-50 flex items-center justify-center bg-[#10131a]/80 backdrop-blur-sm">
             <button (click)="startGame()"
@@ -12,7 +12,7 @@
         <div class="absolute inset-0 opacity-30 pointer-events-none"
             style="background-image: linear-gradient(to right, #1d2027 1px, transparent 1px), linear-gradient(to bottom, #1d2027 1px, transparent 1px); background-size: 40px 40px;">
         </div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#10131a] to-[#10131a] pointer-events-none">
+        <div class="absolute inset-0 pointer-events-none">
         </div>
          <div class="relative z-10 w-full max-w-md flex mb-12 gap-4 items-center">
             <div
@@ -44,7 +44,7 @@
                 }
             </div>
             <button (click)="playerSelect('igual')" [disabled]="evaluating()"
-                class="hover:cursor-pointer max-sm:size-10 size-14 rounded-full border-2 border-[#8b909f] hover:bg-[#32353c] text-[#e0e2ec] flex items-center justify-center transition-all active:scale-90 flex-shrink-0 font-bold max-sm:text-base text-xl disabled:opacity-40 disabled:cursor-not-allowed">
+                class="hover:cursor-pointer max-sm:size-10 size-14 rounded-full border-2 border-[#8b909f] hover:bg-[#32353c]  flex items-center justify-center transition-all active:scale-90 flex-shrink-0 font-bold max-sm:text-base text-xl disabled:opacity-40 disabled:cursor-not-allowed">
                 =
             </button>
             <div
@@ -72,7 +72,7 @@
                 <span class="text-[24px] font-semibold uppercase tracking-wider">Mayor</span>
             </button>
             <button (click)="playerSelect('menor')" [disabled]="evaluating()"
-                class="hover:cursor-pointer flex-1 border border-[#8b909f] hover:bg-[#32353c] text-[#e0e2ec] h-16 rounded-[0.75rem] flex items-center justify-center gap-3 transition-all active:scale-95 group disabled:opacity-40 disabled:cursor-not-allowed">
+                class="hover:cursor-pointer flex-1 border border-[#8b909f] hover:bg-[#32353c]  h-16 rounded-[0.75rem] flex items-center justify-center gap-3 transition-all active:scale-95 group disabled:opacity-40 disabled:cursor-not-allowed">
                 <span class="material-symbols-outlined group-hover:translate-y-1.5 transition-transform"><svg
                         class="size-5 rotate-90" fill="#ffff" viewBox="0 0 1920 1920"
                         xmlns="http://www.w3.org/2000/svg">

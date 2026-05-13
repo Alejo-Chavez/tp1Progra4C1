@@ -1,8 +1,8 @@
-<div class="flex pt-16 justify-center">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:gap-8 px-6 py-4 min-w-2xs gap-3">
+<div class="flex pt-16 justify-center  min-h-dvh bg-cover">
+    <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:gap-8 px-6 py-4 min-w-2xs gap-3 self-start">
 
         @for (game of games; track game.title) {
-        <div class="flex flex-col bg-[var(--ink-black-component)]  p-4 md:p-6 lg:p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer "
+        <div class="flex flex-col bg-[var(--ink-black-component)] p-4 md:p-6 lg:p-6 rounded-xl shadow hover:scale-105 transition cursor-pointer "
             [routerLink]="game.route">
 
             <div class="flex flex-col h-full ">
