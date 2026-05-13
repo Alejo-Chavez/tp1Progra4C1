@@ -74,6 +74,7 @@ export class Register {
       }
 
       console.log("Registrado correctamente");
+      this.authService.currentUser.set({id: userId, email: mail})
       this.router.navigate(['/home'])
 
     } finally {
